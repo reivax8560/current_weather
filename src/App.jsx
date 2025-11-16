@@ -3,15 +3,12 @@ import { dateConversion, timeConversion } from "./utils/formatDateFr";
 import mock from "./mock/mock.json";
 
 export default function App() {
-  const [weatherDatas, setWeatherDatas] = useState(mock);
-  /*
-  const [searchedCity, setSearchedCity] = useState("");
+  const [weatherDatas, setWeatherDatas] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
-  const apiKey = "5d751d6421f899ebcc97f4b3416c8d63"
+  // const [searchedCity, setSearchedCity] = useState("");
 
-  // https://api.weatherstack.com/current?access_key=5d751d6421f899ebcc97f4b3416c8d63&query=grues
-
+  /*
   ////////////////////////////////////////////// requête initiale
   useEffect(() => 
     fetch({`https://api.weatherstack.com/current?access_key=${apiKey}&query=${searchedCity}`)
@@ -25,7 +22,8 @@ export default function App() {
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, []);
-
+  */
+ 
     //////////////////////////////////////////// requête via serveur vercel
   useEffect(() => {
     fetch(`/api/weather?city=Paris`)
@@ -39,10 +37,18 @@ export default function App() {
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, []);
-  */
 
-  const location = weatherDatas.location;
-  const current = weatherDatas.current;
+
+  const location = weatherDatas?.location;
+  const current = weatherDatas?.current;
+
+  if (loading) {
+    return <p>Chargement...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
 
   return (
     <div className="App">
