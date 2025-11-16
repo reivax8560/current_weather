@@ -1,0 +1,57 @@
+{
+  "request": {
+    "type": "City",
+    "query": "Grues, France",
+    "language": "en",
+    "unit": "m"
+  },
+  "location": {
+    "name": "Grues",
+    "country": "France",
+    "region": "Pays de la Loire",
+    "lat": "46.383",
+    "lon": "-1.300",
+    "timezone_id": "Europe/Paris",
+    "localtime": "2025-11-06 16:22",
+    "localtime_epoch": 1762446120,
+    "utc_offset": "1.0"
+  },
+  "current": {
+    "observation_time": "03:22 PM",
+    "temperature": 16,
+    "weather_code": 296,
+    "weather_icons": [
+      "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0017_cloudy_with_light_rain.png"
+    ],
+    "weather_descriptions": ["Light Rain Shower"],
+    "astro": {
+      "sunrise": "07:53 AM",
+      "sunset": "05:43 PM",
+      "moonrise": "05:55 PM",
+      "moonset": "09:17 AM",
+      "moon_phase": "Waning Gibbous",
+      "moon_illumination": 100
+    },
+    "air_quality": {
+      "co": "125.85",
+      "no2": "3.45",
+      "o3": "69",
+      "so2": "1.15",
+      "pm2_5": "2.95",
+      "pm10": "7.35",
+      "us-epa-index": "1",
+      "gb-defra-index": "1"
+    },
+    "wind_speed": 9,
+    "wind_degree": 167,
+    "wind_dir": "SSE",
+    "pressure": 1006,
+    "precip": 0.2,
+    "humidity": 88,
+    "cloudcover": 100,
+    "feelslike": 16,
+    "uv_index": 0,
+    "visibility": 10,
+    "is_day": "yes"
+  }
+}
